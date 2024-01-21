@@ -1,0 +1,120 @@
+@charset "UTF-8";
+@-ms-viewport {
+  width: device-width;
+}
+@font-face {
+  src: url("/fonts/Mulish-Black.ttf");
+  font-family: "Mulish";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 900;
+}
+@font-face {
+  src: url("/fonts/Mulish-BlackItalic.ttf");
+  font-family: "Mulish";
+  font-style: italic;
+  font-display: swap;
+  font-weight: 900;
+}
+@font-face {
+  src: url("/fonts/Mulish-Bold.ttf");
+  font-family: "Mulish";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+}
+@font-face {
+  src: url("/fonts/Mulish-BoldItalic.ttf");
+  font-family: "Mulish";
+  font-style: italic;
+  font-display: swap;
+  font-weight: 700;
+}
+@font-face {
+  src: url("/fonts/Mulish-ExtraBold.ttf");
+  font-family: "Mulish";
+  font-style: italic;
+  font-display: swap;
+  font-weight: 800;
+}
+@font-face {
+  src: url("/fonts/Mulish-ExtraBoldItalic.ttf");
+  font-family: "Mulish";
+  font-style: italic;
+  font-display: swap;
+  font-weight: 800;
+}
+@font-face {
+  src: url("/fonts/Mulish-ExtraLight.ttf");
+  font-family: "Mulish";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 200;
+}
+@font-face {
+  src: url("/fonts/Mulish-ExtraLightItalic.ttf");
+  font-family: "Mulish";
+  font-style: italic;
+  font-display: swap;
+  font-weight: 200;
+}
+/* @font-face {
+  src: url("/fonts/Mulish-Italic.ttf");
+  font-family: "Mulish";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+} */
+@font-face {
+  src: url("/fonts/Mulish-Light.ttf");
+  font-family: "Mulish";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300;
+}
+@font-face {
+  src: url("/fonts/Mulish-LightItalic.ttf");
+  font-family: "Mulish";
+  font-style: italic;
+  font-display: swap;
+  font-weight: 300;
+}
+@font-face {
+  src: url("/fonts/Mulish-Medium.ttf");
+  font-family: "Mulish";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+}
+@font-face {
+  src: url("/fonts/Mulish-MediumItalic.ttf");
+  font-family: "Mulish";
+  font-style: italic;
+  font-display: swap;
+  font-weight: 700;
+}
+@font-face {
+  src: url("/fonts/Mulish-Regular.ttf");
+  font-family: "Mulish";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+}
+@font-face {
+  src: url("/fonts/Mulish-SemiBold.ttf");
+  font-family: "Mulish";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+}
+@font-face {
+  src: url("/fonts/Mulish-SemiBoldItalic.ttf");
+  font-family: "Mulish";
+  font-style: italic;
+  font-display: swap;
+  font-weight: 600;
+}
+
+* {
+  font-family: "Mulish";
+}
