@@ -18,6 +18,7 @@ const Sign_up = () => {
     email: false,
     key: false,
     secret: false,
+    general: false,
   });
   const [obj, setObj] = useState({
     name: "",
@@ -65,7 +66,9 @@ const Sign_up = () => {
         .then((r) => {
           setrResData(r?.data?.data ?? {});
         })
-        .catch((e) => {})
+        .catch((e) => {
+          setErrors({ ...errors, general: true });
+        })
         .finally(() => {
           setLoading(false);
         });
@@ -86,7 +89,7 @@ const Sign_up = () => {
                 <form className="system" onSubmit={onSubmit}>
                   <div className="system_input">
                     <label
-                      style={errors?.label ? { border: "1px solid red" } : {}}
+                      style={errors?.name ? { color: " red" } : {}}
                       className="label"
                     >
                       Username
@@ -103,12 +106,14 @@ const Sign_up = () => {
                         setErrors({ ...errors, name: false });
                       }}
                     />
-                    {/* {errors?.name ? (
-                      <div style={{ color: "red" }}>xato</div>
-                    ) : null} */}
                   </div>
                   <div className="system_input">
-                    <label className="label">Email</label>
+                    <label
+                      style={errors?.name ? { color: " red" } : {}}
+                      className="label"
+                    >
+                      Email
+                    </label>
                     <br />
                     <InputMask
                       style={errors?.email ? { border: "1px solid red" } : {}}
@@ -121,17 +126,19 @@ const Sign_up = () => {
                         setErrors({ ...errors, email: false });
                       }}
                     />
-                    {/* {errors?.email ? (
-                      <div style={{ color: "red" }}>xato</div>
-                    ) : null} */}
                   </div>
                   <div className="system_input">
-                    <label className="label">Key</label>
+                    <label
+                      style={errors?.name ? { color: " red" } : {}}
+                      className="label"
+                    >
+                      Key
+                    </label>
                     <br />
 
                     <InputMask
                       style={errors?.key ? { border: "1px solid red" } : {}}
-                      // type={showPassword ? "text" : "password"}
+                      type={showPassword ? "text" : "password"}
                       name="key"
                       placeholder="Enter your password"
                       value={obj?.key}
@@ -140,12 +147,14 @@ const Sign_up = () => {
                         setErrors({ ...errors, key: false });
                       }}
                     />
-                    {/* {errors?.key ? (
-                      <div style={{ color: "red" }}>xato</div>
-                    ) : null} */}
                   </div>
                   <div className="system_input">
-                    <label className="label">Secret</label>
+                    <label
+                      style={errors?.name ? { color: " red" } : {}}
+                      className="label"
+                    >
+                      Secret
+                    </label>
                     <br />
                     <div className="input">
                       <InputMask
@@ -161,9 +170,7 @@ const Sign_up = () => {
                           setErrors({ ...errors, secret: false });
                         }}
                       />
-                      {/* {errors?.secret ? (
-                        <div style={{ color: "red" }}>xato</div>
-                      ) : null} */}
+
                       <div className="showPassword">
                         <div>
                           {showPassword ? (
