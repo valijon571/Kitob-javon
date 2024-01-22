@@ -1,1 +1,1 @@
-export const api_host = "http://0001.uz";
+export const api_host = "https://0001.uz";

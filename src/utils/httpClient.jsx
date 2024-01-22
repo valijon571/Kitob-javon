@@ -15,6 +15,7 @@ axios.interceptors.request.use(
       config.headers["Sign"] = CryptoJS.MD5(sign_str).toString();
       config.headers["Key"] = key;
     }
+    config.headers["Access-Control-Allow-Origin"] = "null";
     return config;
   },
   (e) => {

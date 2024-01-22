@@ -18,7 +18,6 @@ const Sign_up = () => {
     email: false,
     key: false,
     secret: false,
-    general: false,
   });
   const [obj, setObj] = useState({
     name: "",
@@ -66,9 +65,7 @@ const Sign_up = () => {
         .then((r) => {
           setrResData(r?.data?.data ?? {});
         })
-        .catch((e) => {
-          setErrors({ ...errors, general: true });
-        })
+        .catch((e) => {})
         .finally(() => {
           setLoading(false);
         });
