@@ -176,6 +176,145 @@ export const BooksStyle = styled.div`
               margin-top: 10px;
             }
           }
+          & .myrodal {
+            & .rodal-mask {
+              height: 100vh;
+              width: 100vw;
+              transform: translate(-9.5%, 0%);
+              @media (max-width: 900px) {
+                transform: translate(-9%, 0%);
+                @media (max-width: 860px) {
+                  transform: translate(-6%, 0%);
+                }
+              }
+            }
+            & .rodal-dialog {
+              border-radius: 22px;
+              top: 230px;
+              padding: 28px;
+              @media (max-width: 900px) {
+                bottom: 400px;
+                @media (max-width: 650px) {
+                  bottom: 400px;
+                  @media (max-width: 500px) {
+                    max-width: 90%;
+                    transform: translate(-2%, 0%);
+                    @media (max-width: 420px) {
+                      max-width: 81%;
+                      transform: translate(3%, 0%);
+                      bottom: 500px;
+                    }
+                  }
+                }
+              }
+            }
+            & .text {
+              color: var(--Foundation-Grey-grey-900, #151515);
+              font-family: Mulish;
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 600;
+              /* gap: 2px; */
+              line-height: normal;
+            }
+            & form {
+              & .system_input {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                margin-top: 28px;
+                & .label {
+                  color: var(--Foundation-Grey-grey-900, #151515);
+                  font-feature-settings: "clig" off, "liga" off;
+                  font-family: Mulish;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-weight: 500;
+                  line-height: 120%;
+                }
+                & .icons {
+                  position: absolute;
+                  top: 130px;
+                  left: 42px;
+                  color: #4d4848;
+                  width: 18px;
+                  height: 18px;
+                }
+                & .input {
+                  display: flex;
+                  margin-top: 10px;
+                  height: 30px;
+                  padding: 14px 16px 14px 36px;
+                  align-items: center;
+                  gap: 16px;
+                  align-self: stretch;
+                  border-radius: 6px;
+                  border: 1px solid var(--Foundation-Grey-grey-50, #ebebeb);
+                  background: var(--Foundation-White-white-50, #fefefe);
+                }
+              }
+              & .button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 28px;
+                gap: 12px;
+                & .Close {
+                  border-radius: 4px;
+                  border: 1px solid var(--Foundation-Purple-purple-500, #6200ee);
+                  display: flex;
+                  padding: 10px 24px;
+                  justify-content: center;
+                  align-items: center;
+                  gap: 8px;
+                  flex: 1 0 0;
+                  color: var(--Foundation-Purple-purple-500, #6200ee);
+                  font-family: Mulish;
+                  font-size: 16px;
+                  font-style: normal;
+                  font-weight: 500;
+                  line-height: normal;
+                }
+                & .Submit {
+                  display: flex;
+                  padding: 10px 24px;
+                  justify-content: center;
+                  align-items: center;
+                  gap: 8px;
+                  flex: 1 0 0;
+                  border-radius: 4px;
+                  background: var(--Foundation-Purple-purple-500, #6200ee);
+                  color: var(--Foundation-White-white-50, #fefefe);
+                  font-family: Mulish;
+                  font-size: 16px;
+                  font-style: normal;
+                  font-weight: 500;
+                  line-height: normal;
+                  border: 1px solid var(--Foundation-Grey-grey-50, #6200ee);
+                }
+              }
+            }
+            & .rodal-close {
+              border-radius: 50px;
+              border: 2px solid black;
+              top: 30px;
+              right: 30px;
+              width: 20px;
+              height: 20px;
+            }
+            & .rodal-close:after {
+              left: 2px;
+              background: black;
+              width: 80%;
+              border-radius: 0px;
+            }
+            & .rodal-close:before {
+              left: 2px;
+              background: black;
+              width: 80%;
+              border-radius: 0px;
+            }
+          }
         }
         & .text {
           width: 100%;
@@ -197,7 +336,7 @@ export const BooksStyle = styled.div`
           display: flex;
           width: 100%;
           margin-top: 20px;
-          gap: 24px;
+          gap: 4px;
           @media (max-width: 1000px) {
             display: flex;
             flex-wrap: wrap;
@@ -213,7 +352,7 @@ export const BooksStyle = styled.div`
             /* background: var(--Foundation-White-white-50, #fefefe); */
             /* box-shadow: 0px 4px 24px 0px rgba(51, 51, 51, 0.08); */
             /* display: flex; */
-            width: 33%;
+            width: 37%;
             @media (max-width: 980px) {
               width: 45%;
               @media (max-width: 850px) {
@@ -232,7 +371,7 @@ export const BooksStyle = styled.div`
               background: var(--Foundation-White-white-50, #fefefe);
               box-shadow: 0px 4px 24px 0px rgba(51, 51, 51, 0.08);
               display: flex;
-              width: 100%;
+              width: 73%;
               margin-top: 36px;
               padding: 32px;
               flex-direction: column;
@@ -341,13 +480,10 @@ export const BooksStyle = styled.div`
 
             & .delet_one {
               display: none;
-              /* position: absolute; */
               top: 281px;
               left: 396px;
-              /* right: 1.7%; */
               align-items: center;
               gap: 2px;
-              flex: 1 0 0;
               flex-direction: column;
               flex-wrap: wrap;
               align-content: flex-end;
@@ -377,13 +513,10 @@ export const BooksStyle = styled.div`
             }
             & .delet_to {
               display: none;
-              /* position: absolute; */
               top: 281px;
               left: 704px;
-              /* right: 1.7%; */
               align-items: center;
               gap: 2px;
-              flex: 1 0 0;
               flex-direction: column;
               flex-wrap: wrap;
               align-content: flex-end;
@@ -413,13 +546,10 @@ export const BooksStyle = styled.div`
             }
             & .delet_thre {
               display: none;
-              /* position: absolute; */
               top: 281px;
               left: 396px;
-              /* right: 1.7%; */
               align-items: center;
               gap: 2px;
-              flex: 1 0 0;
               flex-direction: column;
               flex-wrap: wrap;
               align-content: flex-end;

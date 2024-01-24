@@ -1,7 +1,11 @@
-import React from "react";
 import { CssStyle } from "./CssStyle";
+import { Link } from "react-router-dom";
+import React, { useEffect } from "react";
 
 const Undraw_page = () => {
+  const handleReload = () => {
+    window.location.reload();
+  };
   return (
     <>
       <CssStyle>
@@ -12,8 +16,12 @@ const Undraw_page = () => {
                 <img src="/image/undraw_page_not_found_re_e9o6 1.png" />
               </div>
               <div className="button">
-                <button to="/Sign_in" className="Go_Home_Page">Go Home Page</button>
-                <button className="Reload_Page">Reload Page</button>
+                <button className="Go_Home_Page">
+                  <Link to="/">Go Home Page</Link>
+                </button>
+                <button onClick={handleReload} className="Reload_Page">
+                  Reload Page
+                </button>
               </div>
             </div>
           </div>

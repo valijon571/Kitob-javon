@@ -37,7 +37,6 @@ export const CssStyle = styled.div`
           height: 580px;
           @media (max-width: 530px) {
             width: 530px;
-            /* height: 530px; */
             @media (max-width: 500px) {
               width: 350px;
               @media (max-width: 445px) {
@@ -147,7 +146,7 @@ export const CssStyle = styled.div`
                 font-size: 14px;
                 font-style: normal;
                 font-weight: 300;
-                line-height: 120%; /* 16.8px */
+                line-height: 120%; 
                 margin-bottom: 0px;
                 & .text {
                   text-decoration: none;
@@ -298,7 +297,7 @@ export const CssStyle = styled.div`
                 font-size: 14px;
                 font-style: normal;
                 font-weight: 300;
-                line-height: 120%; /* 16.8px */
+                line-height: 120%; 
                 margin-bottom: 0px;
                 & .text {
                   text-decoration: none;
@@ -398,6 +397,10 @@ export const CssStyle = styled.div`
             border-radius: 4px;
             border: 1px solid var(--Foundation-Purple-purple-500, #6200ee);
             background: var(--Foundation-Purple-purple-500, #6200ee);
+            & a {
+              text-decoration: none;
+              color: var(--Foundation-White-white-50, #fefefe);
+            }
           }
           & .Reload_Page {
             color: var(--Foundation-Purple-purple-500, #6200ee);

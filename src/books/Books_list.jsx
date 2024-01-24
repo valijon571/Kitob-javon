@@ -1,9 +1,20 @@
-import React from "react";
 import { BooksStyle } from "./BooksStyle";
+import React, { useState } from "react";
+import Rodal from "rodal";
+import InputMask from "react-input-mask";
+import { PiLinkSimple } from "react-icons/pi";
+import "rodal/lib/rodal.css";
+
 const Books_list = () => {
-  function handleClick() {
-    alert('You clicked me!');
-  }
+  const [visible, setVisible] = useState(false);
+
+  const showRodal = () => {
+    setVisible(true);
+  };
+
+  const hideRodal = () => {
+    setVisible(false);
+  };
   return (
     <>
       <BooksStyle>
@@ -30,14 +41,33 @@ const Books_list = () => {
                   You’ve got <span>7 book</span>
                 </h5>
 
-
-
-                
-                <button onClick={handleClick}
-                 className="Create">
-                  <img src="/image/plus.png" />
-                  Create a boo
+                <button onClick={showRodal} className="Create">
+                  <img src="/image/plus.png" alt="plus" />
+                  Create a book
                 </button>
+                <Rodal
+                  visible={visible}
+                  onClose={hideRodal}
+                  className="myrodal"
+                >
+                  <div className="text">Create a book</div>
+                  <form>
+                    <div className="system_input">
+                      <label className="label">ISBN</label>
+                      <PiLinkSimple className="icons" />
+                      <InputMask
+                        className="input"
+                        type="text"
+                        name="username"
+                        placeholder=" _________________________"
+                      />
+                    </div>
+                    <div className="button">
+                      <button className="Close">Close</button>
+                      <button className="Submit">Submit</button>
+                    </div>
+                  </form>
+                </Rodal>
               </div>
               <div className="text">
                 <p>Your books today</p>
